@@ -1,6 +1,5 @@
 import React, { memo, useState } from 'react'
-import { 
-  Alert,
+import {
   Button,
   StyleSheet,
   Switch,

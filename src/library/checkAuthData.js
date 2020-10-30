@@ -1,27 +1,10 @@
+import { Alert } from 'react-native'
+
 export const checkAuthData = ({email, password}) => {
-  if( email.length < 5 || !email || !~email.indexOf('@') ){
+  if( email.length <= 5 || !~email.indexOf('@') ){
     Alert.alert(
       "Не корректный email!",
-      "Пример: eldiyar@gmail.com",
-      [{ text: "OK" }]
-    )
-    return false
-  }
-
-  if( !email ){
-    Alert.alert(
-      "Email!",
-      "Заполните поле email!",
-      [{ text: "OK" }]
-    )
-    return false
-  }
-
-  if( !password ){
-    Alert.alert(
-      "Пароль!",
-      "Заполните поле password",
-      [{ text: "OK" }]
+      "Пример: eldiyar@gmail.com"
     )
     return false
   }
