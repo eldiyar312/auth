@@ -18,5 +18,17 @@ export const checkAuthData = ({email, password}) => {
     return false
   }
 
+  if(
+    password.search(' ') != -1 || 
+    email.search(' ') != -1
+  ){
+    Alert.alert(
+      "Не корректные данные",
+      "password, email не должены содержать пробелы!",
+      [{ text: "OK" }]
+    )
+    return false
+  }
+
   return true
 }

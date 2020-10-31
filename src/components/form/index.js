@@ -24,15 +24,10 @@ const Form = memo(() => {
   }
 
   const handlerEmail = text => {
-    // убрал лишние пробелы
-    text = text.trim()
-
     setEmail(text)
   }
   
   const handlerPass = text => {
-    text = text.trim()
-
     setPass( text )
   }
 
